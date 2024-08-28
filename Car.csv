@@ -1,0 +1,8 @@
+Car		
+id	long	number
+brand	String	varchar2
+model	String	varchar3
+color	String	varchar4
+registerNumber	String	varchar5
+year	int	number
+price	int	number

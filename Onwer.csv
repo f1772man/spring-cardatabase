@@ -1,0 +1,4 @@
+Onwer		
+ownerid	long	number
+firstname	String	varchar2
+lastname	String	varchar2
