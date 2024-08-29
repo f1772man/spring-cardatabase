@@ -1,9 +1,12 @@
 package com.packt.cardatabase.domain;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity		// Entity (테이블 모델링 Table - Car 클래스를 테이블로 만들겠다. 
 public class Car {
@@ -23,7 +26,8 @@ public class Car {
 		// TODO Auto-generated constructor stub
 	}
 	// 2. 매개변수있는 생성자
-	public Car(String brand, String model, String color, String registerName, int year, int price) {
+	// 매핑관계가 이루어진 Owner 를 생성자에 추가
+	public Car(String brand, String model, String color, String registerName, int year, int price, Owner owner) {
 		super();		
 		this.brand = brand;
 		this.model = model;
@@ -31,6 +35,20 @@ public class Car {
 		this.registerName = registerName;
 		this.year = year;
 		this.price = price;
+		this.owner = owner;
+	}
+	
+	// 
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="owner")
+	private Owner owner;
+	
+	public Owner getOwner() {
+		return owner;
+	}
+	
+	public void setOwner(Owner owner) {
+		this.owner = owner;
 	}
 	
 	// 3. getters/setters 메소드
