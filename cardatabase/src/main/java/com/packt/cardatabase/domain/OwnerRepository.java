@@ -5,7 +5,7 @@ package com.packt.cardatabase.domain;
 
 //import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.PagingAndSortingRepository;
+//import org.springframework.data.repository.PagingAndSortingRepository;
 
 // long -> Long long 형태의 숫자를 Long 형태의 클래스로 변경
 // <> <- 여기에는 클리스만 표시가능함.
