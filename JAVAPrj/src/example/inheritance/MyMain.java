@@ -10,34 +10,7 @@ public class MyMain {
 		
 		student.getDetail();
 
-	}
-	
-	// 자식클래스에서 재정의된 메소드는 부모타입으로 형변환하더라도 실행내용은 자식메소드내용
-
-}
-
-package inherits;
-
-public class MyMain {
-	public static void main(String[] args) {
-      Student student = new Student();
-      student.name="홍길동";
-	  student.studentId="A111";
-	  
-	  student.getDetail();
-	  
-	  //질문 
-	  //부모객체도 생성될까요?생성됨.
-	  //순서는? 부모객체 먼저, 자식객체 나중
-	  new Student(); //부모객체도 생성될까요?생성됨.
-	  
-
-	}
-}
-
-윤희승 5:16 PM
-	  student.getDetail();
-	  
+		  
 	  //질문 
 	  //부모객체도 생성될까요?생성됨.
 	  //순서는? 부모객체 먼저, 자식객체 나중
